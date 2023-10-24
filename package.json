@@ -8,7 +8,7 @@
     "generate": "nuxi generate && touch .output/public/.nojekyll",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
-  },  
+  },
   "devDependencies": {
     "@iconify/json": "^2.2.131",
     "@nuxt/devtools": "latest",

@@ -9,7 +9,7 @@ import '~/assets/css/main.css';
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - Nuxt Tailwind Starter` : 'Nuxt Tailwind Starter';
+    return titleChunk ? `${titleChunk} - BLICK PHOTOGRAPHY` : 'BLICK PHOTOGRAPHY';
   }
 })
 </script>
