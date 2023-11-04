@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: false },
   app: {
-    baseURL: '/nuxt-tailwind-starter/' // update this to your repo name
+  //  baseURL: '/nuxt-tailwind-starter/' 
   },
   css: ['~/assets/css/main.css'],
   modules: [

@@ -29,8 +29,8 @@
           {{ heading }}
         </h2>
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '17.webp'">
-        <img src="17.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="17.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/17.webp'">
+        <img src="/17.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="17.webp" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '23.webp'">
         <img src="23.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="23.webp" />
