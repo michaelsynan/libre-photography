@@ -1,5 +1,5 @@
 <template>
-  <div id="theheadingwrapper" class="h-screen flex flex-col justify-center items-center w-full fixed border-20 border-stone-100">
+  <div id="theheadingwrapper" class="h-screen flex flex-col justify-center items-center w-full fixed  border-stone-100">
     <h1 ref="heading" id="theheading" class="text-stone-100 font-bold clamp-h1 opacity-0 animate-delay relative spartan-light tracking-widest">
       LIBRE PHOTOGRAPHY
     </h1>
@@ -55,10 +55,32 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-#theheadingwrapper {
-  border: 14px solid #f5f5f4;
-  border-radius: 50px;
+  #theheadingwrapper {
+    border: 14px solid #f5f5f4;
+    border-radius: 50px;
+  }
+
+  /* Tailwind's 'sm' breakpoint is 640px by default */
+  @media (max-width: 640px) {
+    #theheadingwrapper {
+      border: 12px solid #f5f5f4; 
+      border-radius: 60px;
+/* Reduced border size for small screens */
+    }
+
+    #theheadingwrapper::before {
+  content: '';
+  position: absolute;
+  top: -16px !important; /* Adjustments may be needed */
+  left: -16px !important; /* Adjustments may be needed */
+  right: -16px !important; /* Adjustments may be needed */
+  bottom: -16px !important; /* Adjustments may be needed */
+  border-radius: none; /* Inherits the 50px border-radius */
+  box-shadow: inset 0 0 0 40px #f5f5f4; /* This creates the inner white border */
+  pointer-events: none; /* Ensures clicks pass through to elements underneath */
 }
+
+  }
 
 #theheadingwrapper::before {
   content: '';
