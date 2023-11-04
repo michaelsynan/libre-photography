@@ -1,47 +1,46 @@
 <template>
-  <div class="h-screen relative">
-    <MainHero class="fixed z-10" />
-  </div>
-  <div id="imagegallerywrapper" class="sticky-container absolute">
-    <ImageGallery id="imagegallery1" :heading="'Street'" class="sticky-gallery py-10 bg-stone-100 shadow-top z-90" />
-    <ImageGallery2 id="imagegallery2" :heading="'Nature'"
-      class="sticky-gallery pt-10 pb-2 bg-stone-100 shadow-top z-100" />
-    <div class="h-20 bg-stone-100"></div>
+  <div class="relative">
+    <!-- MainHero takes the full height of the viewport -->
+    <MainHero class="fixed inset-0 MainHero" />
+
+    <!-- Container for the galleries starts after the full viewport height -->
+    <div id="imagegallerywrapper" class="sticky-container" style="margin-top: 100vh; z-index: 1000000 !important;">
+      <ImageGallery id="imagegallery1" :heading="'Street'" class="sticky-gallery bg-stone-100 shadow-top" />
+      <ImageGallery2 id="imagegallery2" :heading="'Nature'"
+        class="sticky-gallery bg-stone-100 shadow-top" />
+      <div class="h-20 bg-stone-100"></div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-
-/*
-#imagegallery1,
-#imagegallery2,
-#imagegallerywrapper,
-#anotheritem {
-  z-index: 1000 !important;
-}
-*/
-
-
-#imagegallerywrapper {
-  z-index: 1000 !important;
+/* MainHero with lower z-index */
+.MainHero {
+  z-index: 0 !important;
 }
 
-
-
-#anotheritem {
-  z-index: 9;
-}
-
+/* Sticky container with higher z-index than MainHero */
 .sticky-container {
   position: relative;
+  z-index: 20 !important;
 }
 
+/* sticky-gallery elements with specific z-index, higher than MainHero */
 .sticky-gallery {
   position: sticky;
   top: 0;
+  z-index: 10 !important; /* This will be applied to both galleries */
 }
 
-.cover-gallery {
-  position: relative;
+#immagegallerywrapper {z-index: 10000 !important; /* Adjust if needed */}
+/* If you need different z-index values for each gallery, you can assign them individually */
+#imagegallery1 {
+  z-index: 10000 !important; /* Adjust if needed */
 }
+
+#imagegallery2 {
+  z-index: 10001 !important; /* Make sure this is higher than #imagegallery1 if they overlap */
+}
+
+/* Additional styles if needed */
 </style>
