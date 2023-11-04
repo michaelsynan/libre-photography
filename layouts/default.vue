@@ -19,7 +19,7 @@
 }
 
 .bg-custom {
-  background-image: url('hellsgate.webp');
+  background-image: url('/hellsgate.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
