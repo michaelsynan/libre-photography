@@ -20,3 +20,79 @@
         @apply text-lg pb-2;
     }
 }
+
+.shadow-top {
+    box-shadow: 0px -4px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* Import the LeagueSpartan-Black font */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('/public/fonts/LeagueSpartan-Black.otf') format('opentype');
+    font-weight: 900; /* Black is typically 900 */
+  }
+  
+  /* Import the LeagueSpartan-Medium font */
+  @font-face {
+    font-family: 'League Spartan';
+    src: url('/public/fonts/LeagueSpartan-Medium.otf') format('opentype');
+    font-weight: 500; /* Medium is typically 500 */
+  }
+  
+  /* Import the LeagueSpartan-Regular font */
+  @font-face {
+    font-family: 'League Spartan';
+    src: url('/public/fonts/LeagueSpartan-Regular.otf') format('opentype');
+    font-weight: 400; /* Regular is 400 */
+  }
+  
+  /* Import the LeagueSpartan-Light font */
+  @font-face {
+    font-family: 'League Spartan';
+    src: url('/public/fonts/LeagueSpartan-Light.otf') format('opentype');
+    font-weight: 300; /* Light is 300 */
+  }
+  
+  /* Create a class for headings with black font weight */
+  .spartan-black {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 900; /* Black is 900 */
+  }
+  
+  /* Create a class for headings with light font weight */
+  .spartan-light {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300; /* Light is 300 */
+  }
+  
+  /* Create a class for headings with medium font weight */
+  .spartan-medium {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500; /* Medium is 500 */
+  }
+  
+  /* Create a class for headings with regular font weight */
+  .spartan {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400; /* Regular is 400 */
+  }
+  
+  /* Import the LeagueSpartan-SemiBold font */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('/public/fonts/LeagueSpartan-SemiBold.otf') format('opentype');
+    font-weight: 600; /* SemiBold is typically 600 */
+  }
+  
+  /* Create a class for headings with semibold font weight */
+  .spartan-semibold {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600; /* SemiBold is 600 */
+  }
+  
+  /* Add this to your global styles */
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}

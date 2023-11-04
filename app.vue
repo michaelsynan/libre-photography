@@ -9,7 +9,7 @@ import '~/assets/css/main.css';
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - BLICK PHOTOGRAPHY` : 'BLICK PHOTOGRAPHY';
+    return titleChunk ? `${titleChunk} - LIBRE PHOTOGRAPHY` : 'LIBRE PHOTOGRAPHY';
   }
 })
 </script>
