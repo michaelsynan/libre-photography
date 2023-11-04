@@ -32,35 +32,35 @@
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/17.webp'">
         <img src="/17.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="17.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '23.webp'">
-        <img src="23.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="23.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/23.webp'">
+        <img src="/23.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="23.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '24.webp'">
-        <img src="24.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="24.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/24.webp'">
+        <img src="/24.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="24.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '25.webp'">
-        <img src="25.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="25.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/25.webp'">
+        <img src="/25.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="25.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '27.webp'">
-        <img src="27.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="27.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/27.webp'">
+        <img src="/27.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="27.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '21.webp'">
-        <img src="21.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="21.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/21.webp'">
+        <img src="/21.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="21.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '28.webp'">
-        <img src="28.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="28.webp" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/28.webp'">
+        <img src="/28.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="28.webp" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '29.webp '">
-        <img src="29.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="29.webp" />
+        <img src="/29.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="29.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = 'test.jpg'">
-        <img src="test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/test.jpg'">
+        <img src="/test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = 'test.jpg'">
-        <img src="test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/test.jpg'">
+        <img src="/test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = 'test.jpg'">
-        <img src="test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/test.jpg'">
+        <img src="/test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps<{ heading?: string; }>();
-const heading = ref(props.heading ?? 'Blick Photography');
+const heading = ref(props.heading ?? 'Libre Photography');
 const selectedImage = ref(null);
 
 const toggleBodyScroll = (shouldPreventScroll) => {

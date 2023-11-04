@@ -72,7 +72,7 @@
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps<{ heading?: string; }>();
-const heading = ref(props.heading ?? 'Blick Photography');
+const heading = ref(props.heading ?? 'Libre Photography');
 const selectedImage = ref(null);
 
 const toggleBodyScroll = (shouldPreventScroll) => {
