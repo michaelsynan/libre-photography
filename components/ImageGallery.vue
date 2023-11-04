@@ -24,7 +24,6 @@
   </div>
 </teleport>
 
-
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2 md:px-10 py-0 bg-stone-100">
       <div class="m-2 sm:m-4 bg-cyan-950 flex justify-center items-center">
         <h2 class="spartan tracking-wider text-xl sm:text-3xl md:text-5xl font-bold bg-transparent uppercase text-center container mx-auto p-4 text-stone-100">
@@ -101,4 +100,6 @@ onUnmounted(() => {
 
 
 <style scoped>
+
+
 </style>

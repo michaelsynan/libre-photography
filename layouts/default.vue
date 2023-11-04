@@ -1,12 +1,14 @@
 <template>
   <div class="flex flex-col min-h-screen z-0 relative bg-custom">
     <MainNav id="thenav" class="z-50" />
+    <!-- Content container, it grows to push the footer down -->
     <div class="flex-grow relative z-10">
       <div class="z-20 relative">
         <slot />
       </div>
     </div>
-    <MainFooter class="mt-auto z-20" />
+    <!-- Footer, placed at the bottom -->
+    <MainFooter class="z-20" />
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
-  <div :class="['absolute', selectedImage ? 'sandwich' : '']" id="gallerywrapper">
+ <!-- <div :class="['absolute', selectedImage ? 'sandwich' : '']" id="gallerywrapper"> -->
+    <div id="gallerywrapper">
     <teleport to="body">
       <div v-if="selectedImage" id="lightboxbg"
         class="fixed inset-0 bg-stone-950 bg-opacity-80 flex items-center justify-center">
@@ -53,8 +54,8 @@
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '29.webp '">
         <img src="/29.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="29.webp" />
       </div>
-      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/test.jpg'">
-        <img src="/test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
+      <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/30.webp'">
+        <img src="/30.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="30.webp" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/test.jpg'">
         <img src="/test.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="test.jpg" />
