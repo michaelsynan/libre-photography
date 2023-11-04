@@ -6,7 +6,9 @@
     <div v-if="showArrow" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer" @click="scrollDown">
       <i-mdi-arrow-down class="text-3xl md:text-4xl animate-bounce animate-slowest" />
     </div>
+  
   </div>
+  <register class="z-100 hidden" />
 </template>
 
 <script setup>
@@ -66,7 +68,7 @@ onBeforeUnmount(() => {
   right: -20px; /* Adjustments may be needed */
   bottom: -20px; /* Adjustments may be needed */
   border-radius: none; /* Inherits the 50px border-radius */
-  box-shadow: inset 0 0 0 20px #f5f5f4; /* This creates the inner white border */
+  box-shadow: inset 0 0 0 22px #f5f5f4; /* This creates the inner white border */
   pointer-events: none; /* Ensures clicks pass through to elements underneath */
 }
 
