@@ -55,44 +55,26 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-  #theheadingwrapper {
-    border: 14px solid #f5f5f4;
-    border-radius: 50px;
-  }
 
+#theheadingwrapper {
+  border: 10px solid #f5f5f4;
+  border-radius: 48px;
+  box-shadow: 0 0 4px 40px #f5f5f4,
+  0 0 0 -5px #f5f5f4; /* Adjust the color and size as needed */
+  overflow: hidden;
+}
+
+ 
   /* Tailwind's 'sm' breakpoint is 640px by default */
   @media (max-width: 640px) {
     #theheadingwrapper {
-      border: 12px solid #f5f5f4; 
-      border-radius: 60px;
+      border: 6px solid #f5f5f4; 
 /* Reduced border size for small screens */
     }
 
-    #theheadingwrapper::before {
-  content: '';
-  position: absolute;
-  top: -16px !important; /* Adjustments may be needed */
-  left: -16px !important; /* Adjustments may be needed */
-  right: -16px !important; /* Adjustments may be needed */
-  bottom: -16px !important; /* Adjustments may be needed */
-  border-radius: none; /* Inherits the 50px border-radius */
-  box-shadow: inset 0 0 0 40px #f5f5f4; /* This creates the inner white border */
-  pointer-events: none; /* Ensures clicks pass through to elements underneath */
-}
 
   }
 
-#theheadingwrapper::before {
-  content: '';
-  position: absolute;
-  top: -20px; /* Adjustments may be needed */
-  left: -20px; /* Adjustments may be needed */
-  right: -20px; /* Adjustments may be needed */
-  bottom: -20px; /* Adjustments may be needed */
-  border-radius: none; /* Inherits the 50px border-radius */
-  box-shadow: inset 0 0 0 22px #f5f5f4; /* This creates the inner white border */
-  pointer-events: none; /* Ensures clicks pass through to elements underneath */
-}
 
 
 #theheading, #theheadingwrapper {
