@@ -56,25 +56,25 @@ onBeforeUnmount(() => {
 
 <style scoped>
 
-#theheadingwrapper {
+/* #theheadingwrapper {
   border: 10px solid #f5f5f4;
   border-radius: 48px;
   box-shadow: 0 0 4px 40px #f5f5f4,
-  0 0 0 -5px #f5f5f4; /* Adjust the color and size as needed */
+  0 0 0 -5px #f5f5f4; 
   overflow: hidden;
 }
 
  
-  /* Tailwind's 'sm' breakpoint is 640px by default */
+  /* Tailwind's 'sm' breakpoint is 640px by default 
   @media (max-width: 640px) {
     #theheadingwrapper {
       border: 6px solid #f5f5f4; 
-/* Reduced border size for small screens */
+/* Reduced border size for small screens 
     }
 
 
   }
-
+*/
 
 
 #theheading, #theheadingwrapper {
