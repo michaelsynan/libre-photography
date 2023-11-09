@@ -3,7 +3,7 @@
     <teleport to="body">
   <div v-if="selectedImage" id="lightboxbg" class="fixed inset-0 bg-stone-950 bg-opacity-80 flex items-center justify-center">
     <div class="relative w-11/12 sm:w-full max-w-4xl mx-auto flex flex-col items-center">
-      <nuxt-img :src="selectedImage" id="lightboximg" class="block object-contain w-full max-w-full h-auto max-h-[80vh] mb-2" @click="selectedImage = null" />
+      <nuxt-img :src="selectedImage" placeholder id="lightboximg" class="block object-contain w-full max-w-full h-auto max-h-[80vh] mb-2" @click="selectedImage = null" />
 
       <div class="flex justify-center items-center gap-2">
         <a
@@ -31,37 +31,37 @@
         </h2>
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/1.jpg'">
-        <nuxt-img src="/1-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 1" />
+        <nuxt-img src="/1-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 1" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/2.jpg'">
-        <nuxt-img src="/2-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 2" />
+        <nuxt-img src="/2-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 2" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/3.jpg'">
-        <nuxt-img src="/3-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 3" />
+        <nuxt-img src="/3-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 3" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/4.jpg'">
-        <nuxt-img src="/4-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 4" />
+        <nuxt-img src="/4-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 4" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/5.webp'">
-        <nuxt-img src="/5-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 5" />
+        <nuxt-img src="/5-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 5" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/15.webp'">
-        <nuxt-img src="/15-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 15" />
+        <nuxt-img src="/15-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 15" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/16.webp'">
-        <nuxt-img src="/16-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 16" />
+        <nuxt-img src="/16-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 16" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/18.webp'">
-        <nuxt-img src="/18-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 18" />
+        <nuxt-img src="/18-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 18" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/20.webp'">
-        <nuxt-img src="/20-small.jpg" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 20" />
+        <nuxt-img src="/20-small.jpg" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 20" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/21.webp'">
-        <nuxt-img src="/21-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 21" />
+        <nuxt-img src="/21-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 21" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/22.webp'">
-        <nuxt-img src="/22-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 22" />
+        <nuxt-img src="/22-small.webp" loading="lazy" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 22" />
       </div>
     </div>
   </div>
