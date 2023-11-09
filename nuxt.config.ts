@@ -4,7 +4,7 @@ import Components from "unplugin-vue-components/vite";
 
 export default defineNuxtConfig({
  // target: 'static',
-  ssr: true,
+  ssr: false,
   devtools: { enabled: false },
   app: {
   //  baseURL: '/nuxt-tailwind-starter/' 
