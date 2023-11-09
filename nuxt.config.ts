@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     ["unplugin-icons/nuxt", { autoInstall: true }],
     '@vueuse/nuxt',
+    '@nuxt/image'
 ],
 postcss: {
   plugins: {

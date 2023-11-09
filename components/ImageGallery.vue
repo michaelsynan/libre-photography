@@ -31,7 +31,7 @@
         </h2>
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/1.jpg'">
-        <img src="/1-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 1" />
+        <nuxt-img src="/1-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 1" />
       </div>
       <div class="relative pb-[56.25%] m-2 sm:m-4" @click="selectedImage = '/2.jpg'">
         <img src="/2-small.webp" class="absolute inset-0 object-cover w-full h-full cursor-pointer" alt="Image 2" />
