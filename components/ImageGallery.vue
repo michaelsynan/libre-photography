@@ -1,19 +1,26 @@
 <template>
   <div>
     <teleport to="body">
+    <!-- The background overlay appears immediately upon click -->
     <div v-if="selectedImage" class="fixed inset-0 bg-stone-950 bg-opacity-80 flex items-center justify-center">
-      <div :class="['relative w-11/12 sm:w-full max-w-4xl mx-auto flex flex-col items-center', imageLoaded ? 'content-loaded' : 'opacity-0']">
+      <!-- The container for the image and buttons, which will have the fade-in effect -->
+      <div id="lightboxbg"
+        :class="{'content-loaded': imageLoaded, 'opacity-0': !imageLoaded}"
+        class="relative w-11/12 sm:w-full max-w-4xl mx-auto flex flex-col items-center transition-opacity duration-500">
+        <!-- Your image, which when loaded will trigger the fade-in for the container -->
         <nuxt-img :src="selectedImage" id="lightboximg"
-                  class="block object-contain w-full max-w-full h-auto max-h-[80vh] mb-2"
-                  @click="closeLightbox"
-                  @load="imageLoaded = true" />
+          class="block object-contain w-full max-w-full h-auto max-h-[80vh] mb-2 cursor-pointer"
+          @click="closeLightbox" 
+          @load="handleImageLoaded" />
+        <!-- The buttons which are also included in the fade-in effect -->
         <div class="flex justify-center items-center gap-2">
           <a :href="selectedImage" download
-             class="download-button bg-transparent text-stone-300 !bg-amber-700 hover:!bg-amber-600 transition ease-in-out duration-100 py-1 px-2.5 text-sm z-50 flex items-center gap-2 tracking-wider shadow rounded-sm">
+            class="download-button bg-transparent text-stone-300 !bg-amber-700 hover:!bg-amber-600 py-1 px-2.5 text-sm z-50 flex items-center gap-2 tracking-wider shadow rounded-sm">
             <div class="pr-0.5">DOWNLOAD</div><i-mdi-download />
           </a>
-          <button class="close-button bg-transparent text-stone-300 !bg-cyan-900 hover:!bg-cyan-800 transition ease-in-out duration-100 py-1 px-2.5 text-sm z-50 flex items-center gap-2 tracking-wider shadow rounded-sm"
-                  @click="closeLightbox">
+          <button
+            class="close-button bg-transparent text-stone-300 !bg-cyan-900 hover:!bg-cyan-800 py-1 px-2.5 text-sm z-50 flex items-center gap-2 tracking-wider shadow rounded-sm"
+            @click="closeLightbox">
             <div class="pr-0.5">CLOSE</div><i-mdi-close />
           </button>
         </div>
@@ -64,26 +71,32 @@
   </div>
 </template>
 
+
 <script lang="ts" setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps<{ heading?: string; }>();
 const heading = ref(props.heading ?? 'Libre Photography');
-const selectedImage = ref(null);
-const imageLoaded = ref(false); // State to track image loading
 
-// This method gets called when the image has finished loading
+const selectedImage = ref(null)
+const imageLoaded = ref(false)
+
 function handleImageLoaded() {
   imageLoaded.value = true;
 }
 
-// Resets the lightbox state when closed
+watch(selectedImage, (newValue, oldValue) => {
+  if (newValue) {
+    // When a new image is selected, reset imageLoaded to false
+    imageLoaded.value = false;
+  }
+  toggleBodyScroll(!!newValue);
+});
 function closeLightbox() {
-  selectedImage.value = null;
-  imageLoaded.value = false;
+  selectedImage.value = null
+  imageLoaded.value = false // Reset the loaded state for next image
 }
 
-// Toggle body scroll based on whether the lightbox is active
 const toggleBodyScroll = (shouldPreventScroll) => {
   const body = document.body;
   if (shouldPreventScroll) {
@@ -93,15 +106,10 @@ const toggleBodyScroll = (shouldPreventScroll) => {
   }
 };
 
-// Watch for changes in selectedImage to reset imageLoaded and toggle scroll
 watch(selectedImage, (newValue) => {
-  if (newValue) {
-    imageLoaded.value = false; // Reset imageLoaded whenever a new image is selected
-  }
   toggleBodyScroll(!!newValue);
 });
 
-// Existing mounted and unmounted lifecycle hooks
 onMounted(() => {
   if (selectedImage.value) {
     toggleBodyScroll(true);
@@ -115,10 +123,22 @@ onUnmounted(() => {
 
 
 
-<style scoped>
 
+<style scoped>
+/* Add CSS for the opacity animation */
+/* Hide the content initially */
+#lightboxbg.opacity-0 {
+  opacity: 0;
+}
+
+/* Fade in the content quickly when the image is loaded */
 .content-loaded {
   opacity: 1;
-  transition: opacity 0.5s ease; /* Speed up the fade-in to 0.5s */
+  transition: opacity 0.25s ease; /* Faster transition */
+}
+
+/* Ensure the background shows up immediately */
+.fixed.bg-stone-950.bg-opacity-80 {
+  transition: background-color 0.25s ease; /* Transition for background color if needed */
 }
 </style>

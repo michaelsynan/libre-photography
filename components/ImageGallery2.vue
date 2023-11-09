@@ -148,11 +148,11 @@ onUnmounted(() => {
 /* Fade in the content quickly when the image is loaded */
 .content-loaded {
   opacity: 1;
-  transition: opacity 0.5s ease; /* Faster transition */
+  transition: opacity 0.25s ease; /* Faster transition */
 }
 
 /* Ensure the background shows up immediately */
 .fixed.bg-stone-950.bg-opacity-80 {
-  transition: background-color 0.3s ease; /* Transition for background color if needed */
+  transition: background-color 0.25s ease; /* Transition for background color if needed */
 }
 </style>
